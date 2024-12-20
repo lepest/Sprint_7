@@ -22,6 +22,12 @@ class Data:
         "firstName": ''
     }
 
+    payload_4 = {
+        "login": payload['login'],
+        "password": payload['password'],
+        "firstName": ''
+    }
+
     authorization = {
         "login": payload['login'],
         "password": payload['password'],
@@ -82,3 +88,14 @@ class Data:
         "color": [
             "", ""]
     }
+
+class Response:
+
+    success_massage = '{"ok":true}'
+    massage_empty_fields = '{"code":400,"message":"Недостаточно данных для создания учетной записи"}'
+    massage_existing_courier = '{"code":409,"message":"Этот логин уже используется. Попробуйте другой."}'
+    massage_non_existent_courier = '{"code":404,"message":"Учетная запись не найдена"}'
+    error_empty_field = '{"code":400,"message":"Недостаточно данных для входа"}'
+    error_incorrect_login= '{"code":404,"message":"Учетная запись не найдена"}'
+
+    
